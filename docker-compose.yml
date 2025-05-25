@@ -1,0 +1,83 @@
+services:
+  mysql_12:
+    container_name: db_12
+    image: mysql:latest
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./backend/mysql_init:/docker-entrypoint-initdb.d
+    networks:
+      - app-network
+
+  api:
+    container_name: swift_api
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=mysql+pymysql://user:userpassword@mysql_12:3306/mydb
+    depends_on:
+      - mysql_12
+    volumes:
+      - ./backend:/app
+    networks:
+      - app-network
+    command: ./wait-for-mysql.sh mysql_12 python start.py
+
+  frontend:
+    container_name: swift_frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - api
+      - upload-service
+    networks:
+      - app-network
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000
+      - REACT_APP_UPLOAD_API_URL=http://localhost:8001
+
+  upload-service:
+    container_name: swift_upload_service
+    build:
+      context: ./upload-service
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8001:8001"
+    environment:
+      - SWIFT_API_URL=http://api:8000
+      - PORT=8001
+      - API_TIMEOUT=30
+      - LOG_LEVEL=INFO
+    depends_on:
+      - api
+    volumes:
+      - ./upload-service:/app
+      - upload_data:/app/uploads
+    networks:
+      - app-network
+
+volumes:
+  mysql_data:
+  upload_data:
+
+networks:
+  app-network:
+    driver: bridge

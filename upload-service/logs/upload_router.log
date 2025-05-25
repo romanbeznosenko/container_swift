@@ -1,0 +1,35 @@
+2025-05-13 20:45:47,296 - upload_router - INFO - upload_router.py:148 - Received upload: SWIFT_CODES.csv (ID: 4c722bd6-e220-464e-b75c-c104eb45db87)
+2025-05-13 20:45:47,303 - upload_router - INFO - upload_router.py:153 - Saved file to: /app/uploads/4c722bd6-e220-464e-b75c-c104eb45db87_SWIFT_CODES.csv
+2025-05-13 20:45:47,319 - upload_router - INFO - upload_router.py:50 - Starting to process CSV file: /app/uploads/4c722bd6-e220-464e-b75c-c104eb45db87_SWIFT_CODES.csv (ID: 4c722bd6-e220-464e-b75c-c104eb45db87)
+2025-05-13 20:45:47,601 - upload_router - ERROR - upload_router.py:102 - Error processing CSV file: SWIFT code API is not available
+2025-05-13 20:45:47,603 - upload_router - INFO - upload_router.py:110 - Removed temporary file: /app/uploads/4c722bd6-e220-464e-b75c-c104eb45db87_SWIFT_CODES.csv
+2025-05-13 20:53:14,414 - upload_router - INFO - upload_router.py:149 - Received upload: SWIFT_CODES.csv (ID: 17b3f105-fc41-405f-8f09-768c69c0bb30)
+2025-05-13 20:53:14,420 - upload_router - INFO - upload_router.py:154 - Saved file to: /app/uploads/17b3f105-fc41-405f-8f09-768c69c0bb30_SWIFT_CODES.csv
+2025-05-13 20:53:14,425 - upload_router - INFO - upload_router.py:51 - Starting to process CSV file: /app/uploads/17b3f105-fc41-405f-8f09-768c69c0bb30_SWIFT_CODES.csv (ID: 17b3f105-fc41-405f-8f09-768c69c0bb30)
+2025-05-13 20:53:38,088 - upload_router - INFO - upload_router.py:78 - CSV processing complete for upload 17b3f105-fc41-405f-8f09-768c69c0bb30: 0 created, 0 skipped, 1061 failed
+2025-05-13 20:53:38,090 - upload_router - INFO - upload_router.py:111 - Removed temporary file: /app/uploads/17b3f105-fc41-405f-8f09-768c69c0bb30_SWIFT_CODES.csv
+2025-05-13 20:59:20,486 - upload_router - INFO - upload_router.py:149 - Received upload: SWIFT_CODES.csv (ID: 68488fd8-787c-49b6-9a5c-1839352bab71)
+2025-05-13 20:59:20,493 - upload_router - INFO - upload_router.py:154 - Saved file to: /app/uploads/68488fd8-787c-49b6-9a5c-1839352bab71_SWIFT_CODES.csv
+2025-05-13 20:59:20,497 - upload_router - INFO - upload_router.py:51 - Starting to process CSV file: /app/uploads/68488fd8-787c-49b6-9a5c-1839352bab71_SWIFT_CODES.csv (ID: 68488fd8-787c-49b6-9a5c-1839352bab71)
+2025-05-13 20:59:48,083 - upload_router - INFO - upload_router.py:78 - CSV processing complete for upload 68488fd8-787c-49b6-9a5c-1839352bab71: 1061 created, 0 skipped, 0 failed
+2025-05-13 20:59:48,084 - upload_router - INFO - upload_router.py:111 - Removed temporary file: /app/uploads/68488fd8-787c-49b6-9a5c-1839352bab71_SWIFT_CODES.csv
+2025-05-13 21:21:23,278 - upload_router - INFO - upload_router.py:149 - Received upload: SWIFT_CODES.csv (ID: 2109ede4-4e12-4f79-ad58-430e7b45c3d7)
+2025-05-13 21:21:23,312 - upload_router - INFO - upload_router.py:154 - Saved file to: /app/uploads/2109ede4-4e12-4f79-ad58-430e7b45c3d7_SWIFT_CODES.csv
+2025-05-13 21:21:23,325 - upload_router - INFO - upload_router.py:51 - Starting to process CSV file: /app/uploads/2109ede4-4e12-4f79-ad58-430e7b45c3d7_SWIFT_CODES.csv (ID: 2109ede4-4e12-4f79-ad58-430e7b45c3d7)
+2025-05-13 21:21:51,441 - upload_router - INFO - upload_router.py:78 - CSV processing complete for upload 2109ede4-4e12-4f79-ad58-430e7b45c3d7: 1061 created, 0 skipped, 0 failed
+2025-05-13 21:21:51,442 - upload_router - INFO - upload_router.py:111 - Removed temporary file: /app/uploads/2109ede4-4e12-4f79-ad58-430e7b45c3d7_SWIFT_CODES.csv
+2025-05-13 21:37:36,580 - upload_router - INFO - upload_router.py:149 - Received upload: SWIFT_CODES.csv (ID: 725770b8-b889-4c17-87da-c9091d5b8111)
+2025-05-13 21:37:36,588 - upload_router - INFO - upload_router.py:154 - Saved file to: /app/uploads/725770b8-b889-4c17-87da-c9091d5b8111_SWIFT_CODES.csv
+2025-05-13 21:37:36,594 - upload_router - INFO - upload_router.py:51 - Starting to process CSV file: /app/uploads/725770b8-b889-4c17-87da-c9091d5b8111_SWIFT_CODES.csv (ID: 725770b8-b889-4c17-87da-c9091d5b8111)
+2025-05-13 21:38:00,969 - upload_router - INFO - upload_router.py:78 - CSV processing complete for upload 725770b8-b889-4c17-87da-c9091d5b8111: 0 created, 1061 skipped, 0 failed
+2025-05-13 21:38:00,970 - upload_router - INFO - upload_router.py:111 - Removed temporary file: /app/uploads/725770b8-b889-4c17-87da-c9091d5b8111_SWIFT_CODES.csv
+2025-05-14 10:48:45,977 - upload_router - INFO - upload_router.py:149 - Received upload: SWIFT_CODES.csv (ID: ccfc42f9-0e5a-4c2e-b700-7d10b0c4496f)
+2025-05-14 10:48:45,990 - upload_router - INFO - upload_router.py:154 - Saved file to: /app/uploads/ccfc42f9-0e5a-4c2e-b700-7d10b0c4496f_SWIFT_CODES.csv
+2025-05-14 10:48:46,010 - upload_router - INFO - upload_router.py:51 - Starting to process CSV file: /app/uploads/ccfc42f9-0e5a-4c2e-b700-7d10b0c4496f_SWIFT_CODES.csv (ID: ccfc42f9-0e5a-4c2e-b700-7d10b0c4496f)
+2025-05-14 10:49:16,732 - upload_router - INFO - upload_router.py:78 - CSV processing complete for upload ccfc42f9-0e5a-4c2e-b700-7d10b0c4496f: 1061 created, 0 skipped, 0 failed
+2025-05-14 10:49:16,734 - upload_router - INFO - upload_router.py:111 - Removed temporary file: /app/uploads/ccfc42f9-0e5a-4c2e-b700-7d10b0c4496f_SWIFT_CODES.csv
+2025-05-14 14:19:12,420 - upload_router - INFO - upload_router.py:149 - Received upload: SWIFT_CODES.csv (ID: 6c990111-2831-44dd-84cf-2923a1742bd7)
+2025-05-14 14:19:12,423 - upload_router - INFO - upload_router.py:154 - Saved file to: /app/uploads/6c990111-2831-44dd-84cf-2923a1742bd7_SWIFT_CODES.csv
+2025-05-14 14:19:12,426 - upload_router - INFO - upload_router.py:51 - Starting to process CSV file: /app/uploads/6c990111-2831-44dd-84cf-2923a1742bd7_SWIFT_CODES.csv (ID: 6c990111-2831-44dd-84cf-2923a1742bd7)
+2025-05-14 14:19:35,378 - upload_router - INFO - upload_router.py:78 - CSV processing complete for upload 6c990111-2831-44dd-84cf-2923a1742bd7: 0 created, 1061 skipped, 0 failed
+2025-05-14 14:19:35,380 - upload_router - INFO - upload_router.py:111 - Removed temporary file: /app/uploads/6c990111-2831-44dd-84cf-2923a1742bd7_SWIFT_CODES.csv

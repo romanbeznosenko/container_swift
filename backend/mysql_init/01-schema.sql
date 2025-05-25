@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS swift_codes (
+    swiftCode VARCHAR(11) PRIMARY KEY,
+    address VARCHAR(255) NOT NULL,
+    countryISO2 VARCHAR(2) NOT NULL,
+    countryName VARCHAR(100) NOT NULL,
+    isHeadquarter BOOLEAN NOT NULL DEFAULT FALSE
+);
