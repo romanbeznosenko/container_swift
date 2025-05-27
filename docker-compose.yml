@@ -1,18 +1,17 @@
 services:
-  mysql_12:
-    container_name: db_12
-    image: mysql:latest
+  mongodb:
+    container_name: db_mongo
+    image: mongo:latest
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: mydb
-      MYSQL_USER: user
-      MYSQL_PASSWORD: userpassword
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootpassword
+      MONGO_INITDB_DATABASE: mydb
     ports:
-      - "3306:3306"
+      - "27017:27017"
     volumes:
-      - mysql_data:/var/lib/mysql
-      - ./backend/mysql_init:/docker-entrypoint-initdb.d
+      - mongodb_data:/data/db
+      - ./backend/mongo_init:/docker-entrypoint-initdb.d
     networks:
       - app-network
 
@@ -25,14 +24,15 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - DATABASE_URL=mysql+pymysql://user:userpassword@mysql_12:3306/mydb
+      - DATABASE_URL=mongodb://root:rootpassword@mongodb:27017/mydb?authSource=admin
+      - DATABASE_TYPE=mongodb
     depends_on:
-      - mysql_12
+      - mongodb
     volumes:
       - ./backend:/app
     networks:
       - app-network
-    command: ./wait-for-mysql.sh mysql_12 python start.py
+    command: ./wait-for-mongodb.sh mongodb python start.py
 
   frontend:
     container_name: swift_frontend
@@ -75,7 +75,7 @@ services:
       - app-network
 
 volumes:
-  mysql_data:
+  mongodb_data:
   upload_data:
 
 networks:
