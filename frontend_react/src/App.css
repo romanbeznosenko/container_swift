@@ -1,0 +1,60 @@
+.App {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.swift-code-card {
+  transition: transform 0.2s;
+}
+
+.swift-code-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+  margin-bottom: 1.5rem;
+}
+
+.filters-section {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 0.25rem;
+}
+
+.detail-container {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.headquarters-badge {
+  background-color: #28a745;
+  color: white;
+  margin-left: 0.5rem;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pagination {
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.error-message {
+  color: #dc3545;
+  padding: 1rem;
+  background-color: #f8d7da;
+  border-radius: 0.25rem;
+  text-align: center;
+}
